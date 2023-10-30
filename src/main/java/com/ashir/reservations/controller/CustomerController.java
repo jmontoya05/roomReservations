@@ -2,6 +2,7 @@ package com.ashir.reservations.controller;
 
 import com.ashir.reservations.model.Customer;
 import com.ashir.reservations.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,7 +22,7 @@ import java.util.Optional;
 public class CustomerController {
 
     private final CustomerService customerService;
-
+    @Autowired
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }

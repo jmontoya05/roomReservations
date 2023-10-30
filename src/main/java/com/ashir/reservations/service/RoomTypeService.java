@@ -3,10 +3,11 @@ package com.ashir.reservations.service;
 import com.ashir.reservations.model.RoomType;
 import com.ashir.reservations.repository.RoomTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class RoomTypeService {
 
     private final RoomTypeRepository roomTypeRepository;
