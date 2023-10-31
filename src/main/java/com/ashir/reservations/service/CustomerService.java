@@ -17,7 +17,14 @@ public class CustomerService {
     }
 
     public Customer saveCustomer(Customer customer){
-        return customerRepository.save(customer);
+        if (customer.getDocument().matches("\\d{5,10}")){
+            if (customer.getFirstName()!=null){
+                if (customer.getLastName()!=null){
+                    return customerRepository.save(customer);
+                }
+            }
+        }
+        throw new RuntimeException();
     }
 
     public Optional<Customer> getCustomer(String document){
