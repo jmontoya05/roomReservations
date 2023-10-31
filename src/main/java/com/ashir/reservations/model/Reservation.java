@@ -33,6 +33,13 @@ public class Reservation {
     public Reservation() {
     }
 
+    public Reservation(String reservationCode, LocalDate reservationDate, Integer roomNumber, String customerDocument, BigDecimal reservationPrice) {
+        this.reservationCode = reservationCode;
+        this.reservationDate = reservationDate;
+        this.roomNumber = roomNumber;
+        this.customerDocument = customerDocument;
+        this.reservationPrice = reservationPrice;
+    }
     public Reservation(String reservationCode, LocalDate reservationDate, Integer roomNumber, String customerDocument, BigDecimal reservationPrice, Room room, Customer customer) {
         this.reservationCode = reservationCode;
         this.reservationDate = reservationDate;
